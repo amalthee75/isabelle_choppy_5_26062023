@@ -111,3 +111,18 @@ header {
 #romans #liste li img {
   width: 50px;
 }
+
+/*Erreurs - Succès*/
+.success {
+  color: green;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.error {
+  color: red;
+  text-align: center;
+  font-weight: bold;
+  font-size: 18px;
+}

@@ -11,15 +11,15 @@
     <h1>Connexion</h1>
 
     <div id="div_form">
-        <form action="<?php echo $loginForm; ?>" method="POST">
-            <input type="text" id="pseudo" placeholder="pseudo">
-            <input type="email" id="email" placeholder="email">
-            <input type="password" id="password" placeholder="password">
+        <form action="http://localhost/isabelle_choppy_5_26062023/index.php?action=login" method="post">
+            <input type="email" name="email" id="email" placeholder="email">
+            <input type="password" name="password" id="password" placeholder="password">
             <input type="submit" id="connect" value="Connexion">
+
+        </form>
     </div>
 
-
-    </form>
+    <?php include("components/message.php") ?>
 
 </body>
 
