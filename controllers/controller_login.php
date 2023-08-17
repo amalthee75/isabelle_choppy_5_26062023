@@ -12,7 +12,7 @@ function userController_signupUser()
     //création de l'url automatique pour poster le formulaire
     $formAction = "http://localhost/isabelle_choppy_4_24122021/index.php?action=signup";
 
-    var_dump($title, $formAction);
+    // var_dump($title, $formAction);
 
     require 'templates/login.php';
 }
@@ -26,7 +26,7 @@ function loginConnexion_log()
         include "templates/dahsboard.php";
     }
 
-    var_dump($_POST);
+    // var_dump($_POST);
 
     if (
         isset($_POST) && !empty($_POST)

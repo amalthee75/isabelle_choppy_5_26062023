@@ -22,7 +22,7 @@ function show_Authors_controller()
 
     $author = new AuthorClass();
     $authors = $author->authors();
-    var_dump($authors);
+    // var_dump($authors);
 
     // $_SESSION["success"] = "Liste des romans";
 

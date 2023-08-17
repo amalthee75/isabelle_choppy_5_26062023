@@ -1,0 +1,143 @@
+/*Polices*/
+@import url("https://fonts.googleapis.com/css2?family=Caprasimo&family=Lilita+One&family=Poppins:wght@900&family=Rowdies&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Caprasimo&family=Lilita+One&family=Montserrat&family=Poppins:wght@900&family=Rowdies&display=swap");
+
+/*body*/
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(12, 116, 235);
+  font-family: "Caprasimo", cursive;
+  font-family: "Lilita One", cursive;
+  font-family: "Montserrat", sans-serif;
+  font-family: "Poppins", sans-serif;
+  font-family: "Rowdies", cursive;
+}
+#general {
+  width: 100%;
+  margin: auto;
+}
+/*Messages*/
+.success,
+.error {
+  margin: auto;
+  margin-top: 20px;
+  padding-top: 5px;
+  width: 480px;
+  height: 30px;
+  text-align: center;
+  font-size: 18px;
+  background-color: white;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.success {
+  color: green;
+}
+.error {
+  color: red;
+}
+
+/*header - page login*/
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #fff;
+  height: 100px;
+}
+
+#navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+#navbar img {
+  width: 100px;
+}
+
+#navbar h1 {
+  font-family: "Caprasimo", cursive;
+  font-family: "Lilita One", cursive;
+  font-family: "Poppins", sans-serif;
+  font-family: "Rowdies", cursive;
+  font-size: 35px;
+}
+
+#navbar #button_log {
+  width: 150px;
+  height: 35px;
+  border-radius: 4px;
+  background-color: rgb(12, 116, 235);
+  color: white;
+  font-weight: bolder;
+  font-size: 17px;
+}
+/*header - page login*/
+#navbar .nav-menu {
+  display: flex;
+  text-align: center;
+  list-style-type: none;
+  gap: 23px;
+}
+
+.nav-link {
+  text-decoration: none;
+}
+
+/*Formulaire de connexion - page login*/
+
+#div_form {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+
+#div_form #email,
+#password {
+  width: 210px;
+  height: 40px;
+  border-radius: 2px;
+  color: black;
+  text-align: center;
+  font-size: 16px;
+}
+
+#div_form #connect {
+  width: 150px;
+  height: 40px;
+  border-radius: 2px;
+  background-color: #fff;
+  color: rgb(12, 116, 235);
+  font-weight: bolder;
+  font-size: 16px;
+}
+#img_page_login {
+  width: 25%;
+  margin: auto;
+  margin-top: 30px;
+}
+
+/*footer*/
+footer {
+  position: fixed;
+  bottom: 0;
+  height: 50px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+  right: 0;
+  z-index: 3;
+}

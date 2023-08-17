@@ -1,12 +1,12 @@
 <?php
 session_start();
-var_dump($_SESSION);
+// var_dump($_SESSION);
 
 require_once("models/model.php");
 require_once("models/user_model.php");
 require_once("models/author_model.php");
 //Routeur
-require_once("controllers/pages_controller.php");
+require_once("controllers/controller_pages.php");
 // require_once("controllers/controller_commentaires.php");
 // require_once("controllers/controller_romans.php");
 require_once("controllers/controller_authors.php");
@@ -57,6 +57,9 @@ if (isset($_GET["action"]) && ($_GET["action"]) !== '') {
             middlewareIsLogin(pagesController_dashboard());
             break;
 
+        case "deconnexion";
+            deconnection_controller();
+            break;
         default:
             echo "Cette page n'existe pas";
             break;

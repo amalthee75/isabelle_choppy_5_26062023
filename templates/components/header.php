@@ -3,31 +3,15 @@
         <img id="image_accueil" src="images/fleur_blog.jpg" alt="">
         <ul class="nav-menu">
             <li class="link">
-                <a href="#" class="link">Historique</a>
+                <a href="#" class="nav-link">Historique</a>
             </li>
             <li class="link"><a href="#" class="nav-link">Romans anciens</a>
-                <ul class="submenu">
-                    <li><a href="#">Romans du XIXème siècle</a></li>
-                    <ul class="titres">
-                        <li>livre1</li>
-                        <li>livre2</li>
-                        <li>livre3</li>
-                        <li>livre4</li>
-                        <li>livre5</li>
-                    </ul>
-                    <li><a href="#">Romans du XXème siècle</a>
-                        <ul class="titres">
-                            <li>livre1</li>
-                            <li>livre2</li>
-                            <li>livre3</li>
-                            <li>livre4</li>
-                            <li>livre5</li>
-                        </ul>
-                    </li>
-                </ul>
             </li>
             <li>
-                <a href="#">Créations de romans</a>
+                <a href="#" class="nav-link">Créations de romans</a>
+            </li>
+            <li>
+                <a href="#" class="nav-link">Déconnection</a><?php deconnection_controller(); ?>
             </li>
         </ul>
     </nav>

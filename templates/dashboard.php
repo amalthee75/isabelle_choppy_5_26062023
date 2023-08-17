@@ -5,18 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tableau de bord</title>
+    <link rel="stylesheet" href="style/style.css">
 </head>
 
 <body>
+    <?php include("components/header.php") ?>
     <h1>Tableau de bord</h1>
 
     <a href="">Ajouter un auteur</a>
     <a href="index.php?action=showAuthors">Voir tous les auteurs</a>
 
-    <!-- <form action="romans_liste.php" method="POST">
-        <input type="search" name="search" placeholder="rechercher">
-        <input type="submit" id="ajouter" value="Ajouter un auteur">
-    </form> -->
+    <?php include("components/footer.php") ?>
 
 </body>
 
