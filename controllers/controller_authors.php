@@ -1,21 +1,5 @@
 <?php
 
-// function connect_Authors_controller()
-// {
-//     var_dump($_POST);
-
-//     if ($_POST) {
-//         var_dump($_POST["ajouter"]);
-//         $author = new Authors();
-//         $author->connexion_authors_model($data);
-
-//         // $_SESSION["success"] = "Ca marche ;)";
-
-//         header("Location:http://localhost/isabelle_choppy_5_26062023/index.php?action=dashboard");
-
-//         require "templates/dahsboard.php";
-//     }
-// }
 
 function show_Authors_controller()
 {
@@ -27,4 +11,14 @@ function show_Authors_controller()
     // $_SESSION["success"] = "Liste des romans";
 
     require "templates/romans_liste.php";
+}
+
+function add_Author_controller()
+{
+
+    // Si il y a un post ()
+    $author = new AuthorClass();
+    $author = $author->add_Author_model($_POST);
+
+    // Afficher le template HTML du formulaire
 }

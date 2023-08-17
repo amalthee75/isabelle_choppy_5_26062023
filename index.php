@@ -12,7 +12,6 @@ require_once("controllers/controller_pages.php");
 require_once("controllers/controller_authors.php");
 require_once("controllers/controller_login.php");
 
-
 function middlewareIsLogin($LaunchFonction)
 {
     if (isset($_SESSION['login']) && $_SESSION['login']) {
@@ -26,7 +25,6 @@ function middlewareIsLogin($LaunchFonction)
     return false;
 }
 
-
 if (isset($_GET["action"]) && ($_GET["action"]) !== '') {
     switch ($_GET["action"]) {
         case 'accueil':
@@ -37,17 +35,13 @@ if (isset($_GET["action"]) && ($_GET["action"]) !== '') {
             loginConnexion_log();
             break;
 
-        case 'deconnection':
-            deconnection_controller();
-            break;
-
         case "signup":
             userController_signupUser();
             break;
 
-            // case "connectAuthors";
-            //     middlewareIsLogin(connect_Authors_controller());
-            //     break;
+        case "addAuthor";
+            middlewareIsLogin(add_Author_controller());
+            break;
 
         case "showAuthors";
             middlewareIsLogin(show_Authors_controller());

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
@@ -9,13 +9,21 @@
 </head>
 
 <body>
-    <?php include("components/header.php") ?>
-    <h1>Tableau de bord</h1>
+    <div id="general">
+        <?php include("components/header.php") ?>
+        <h1>Tableau de bord</h1>
+        <div id="contenu_dashboard">
 
-    <a href="">Ajouter un auteur</a>
-    <a href="index.php?action=showAuthors">Voir tous les auteurs</a>
+            <!-- <input type="text" id="ajout" placeholder="Ajouter un auteur"> -->
+            <a href="romans_liste.php">Ajouter un auteur</a>
+            <a href="index.php?action=showAuthors">Voir tous les auteurs</a>
+        </div>
 
-    <?php include("components/footer.php") ?>
+
+        <?php include("components/footer.php") ?>
+    </div>
+
+
 
 </body>
 

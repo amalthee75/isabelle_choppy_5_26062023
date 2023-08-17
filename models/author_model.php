@@ -22,4 +22,13 @@ class AuthorClass extends Model
 
         return $reponse;
     }
+    public function add_Author_model($data)
+    {
+
+        $sql = 'INSERT INTO auteurs(nom, prenom, date_naissance, date_mort) VALUES(?, ?, ?, ?)';
+        $request = $this->db->prepare($sql);
+        $request->execute($data["nom"], $data["prenom"], $data["date_naissance"], $data["date_mort"]);
+
+        var_dump($request);
+    }
 }

@@ -11,7 +11,7 @@
                 <a href="#" class="nav-link">Créations de romans</a>
             </li>
             <li>
-                <a href="#" class="nav-link">Déconnection</a><?php deconnection_controller(); ?>
+                <a href="index.php?action=deconnexion" class="nav-link">Déconnection</a>
             </li>
         </ul>
     </nav>
