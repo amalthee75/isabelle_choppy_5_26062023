@@ -63,16 +63,3 @@ function deconnection_controller()
 
     header("Location: http://localhost/isabelle_choppy_5_26062023/index.php?action=login");
 }
-
-// function userController_TableauDeBord()
-// {
-//     $userModel = new Post();
-//     // if(isset($_SESSION) && isset($_SESSION['login']) && $_SESSION['login'] == true && $_SESSION['email']){
-
-//     $database = connexion_db();
-//     $posts = $userModel->postModel_getAllPosts($database);
-//     // var_dump($posts);
-
-//     require 'templates/tableau_de_bord.php';
-//     return;
-// }

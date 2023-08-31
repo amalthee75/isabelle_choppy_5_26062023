@@ -18,7 +18,7 @@
 
         <section id="bienvenue">
             <h1>BIENVENUE SUR LE SITE</h1>
-            <P>Cette plateforme est destinée aux amoureux des livres à l'eau de rose</P>
+            <p>Cette plateforme est destinée aux amoureux des livres à l'eau de rose</p>
             <button id="enter"><a href="accueil_detail">Entrée</a></button>
         </section>
     </div>

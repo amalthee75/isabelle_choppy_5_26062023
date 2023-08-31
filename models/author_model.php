@@ -32,4 +32,18 @@ class AuthorClass extends Model
         $reponse = $this->db->lastInsertId();
         return $reponse;
     }
+    public function show_one_author_model($id)
+    {
+        //SQL
+        $sql = "SELECT * FROM `auteurs` WHERE id = $id";
+
+        //Exécuter
+        $request = $this->db->query($sql);
+
+        //Récupere les données ou renvoyer un tableau vide
+        $item = $request ? $request->fetch() : [];
+
+        //Return
+        return $item;
+    }
 }

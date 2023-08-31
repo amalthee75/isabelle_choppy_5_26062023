@@ -8,17 +8,21 @@
     <link rel="stylesheet" href="style/style.css">
 
 <body>
-    <?php include('components/header.php') ?>
-    <h1>Liste des romans</h1>
+    <div id="general">
 
-    <?php foreach ($authors as $author) { ?>
 
-        <p>Nom <?= htmlspecialchars($author["nom"]); ?> - Prenom <?= htmlspecialchars($author["prenom"]); ?> </p>
-        <p>Naissance <?= htmlspecialchars($author["date_naissance"]); ?> - Mort: <?= htmlspecialchars($author["date_mort"]); ?> </p>
+        <?php include('components/header_admin.php') ?>
+        <h1>Liste des romans</h1>
+        <div id="liste_romans">
+            <?php foreach ($authors as $author) { ?>
 
-    <?php } ?>
+                <p><a href="index.php?action=showOneAuthor"><?= htmlspecialchars($author["nom"]); ?><?= htmlspecialchars($author["prenom"]); ?></a> - <?= htmlspecialchars($author["date_naissance"]); ?> <?= htmlspecialchars($author["date_mort"]); ?></p>
 
-    <?php include("components/footer.php") ?>
+            <?php } ?>
+        </div>
+        <?php include("components/message.php") ?>;
+        <?php include("components/footer.php") ?>
+    </div>
 </body>
 
 </html>
