@@ -27,24 +27,4 @@ class User extends Model
         }
         return false;
     }
-
-    // public function usermodel_deconnexion()
-    // {
-    //     if (isset($_POST['email']) && ($_POST["password"])) {
-    //         $_POST["email"] = "";
-    //         $_POST["password"] = "";
-    //         // Finalement, on détruit la session.
-    //         session_destroy();
-    //         return true;
-    //     }
-    // }
 }
-
-
-
-// function userModel_sign()
-// {
-//     if (isset($_POST["pseudo"]) && ($_POST["email"]) && ($_POST["password"])) {
-//         $_POST["password"] = password_hash($_POST["password"], PASSWORD_BCRYPT);
-//     }
-// }

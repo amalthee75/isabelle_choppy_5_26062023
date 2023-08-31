@@ -12,16 +12,24 @@
     <div id="general">
         <?php include "components/header_log.php"; ?>
 
-        <h1>Connexion</h1>
-
         <div id="div_form">
-            <form action="http://localhost/isabelle_choppy_5_26062023/index.php?action=login" method="post">
+            <form action="http://localhost/isabelle_choppy_5_26062023/index.php?action=login" method="POST">
                 <input type="email" name="email" id="email" placeholder="email">
                 <input type="password" name="password" id="password" placeholder="password">
                 <input type="submit" id="connect" value="Connexion">
 
             </form>
             <img id="img_page_login" src="images/pigeons_romantiques" alt="pigeons">
+
+            <ul id="welcome_menu">
+                <li class="link">
+                    <a href="#" class="nav-link">Historique</a>
+                </li>
+                <li class="link"><a href="#" class="nav-link">Romans anciens</a>
+                </li>
+                <li class="link">
+                    <a href="#" class="nav-link">Créations</a>
+                </li>
         </div>
 
         <?php include("components/message.php") ?>

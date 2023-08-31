@@ -58,19 +58,4 @@ if (isset($_GET["action"]) && ($_GET["action"]) !== '') {
             echo "Cette page n'existe pas";
             break;
     }
-    // if ($_GET["action"] === "accueil") {
-    //     pagesController_homepage();
-    // } elseif ($_GET["action"] === "showComments") {
-    //     showComments();
-    // } elseif ($_GET["action"] === "showBooks") {
-    //     showBooks();
-    // } elseif ($_GET["action"] === "sign") {
-    //     loginConnexion_sign();
-    // } elseif ($_GET["action"] === "login") {
-    //     loginConnexion_log();
-    // } elseif ($_GET["action"] === "formAuthors") {
-    //     connexion_authors();
-    // } else {
-    //     echo "Cette page n'existe pas";
-    // }
 }

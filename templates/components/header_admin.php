@@ -3,14 +3,12 @@
         <img id="image_accueil" src="images/fleur_blog.jpg" alt="">
         <ul class="nav-menu">
             <li class="link">
-                <a href="#" class="nav-link">Historique</a>
+                <a href="index.php?action=addAuthor" class="nav-link">Ajouter un auteur</a>
             </li>
-            <li class="link"><a href="#" class="nav-link">Romans anciens</a>
+            <li class="link"><a href="index.php?action=showAuthors" class="nav-link">Liste des auteurs</a>
             </li>
-            <li>
-                <a href="#" class="nav-link">Créations de romans</a>
-            </li>
-            <li>
+
+            <li class="link">
                 <a href="index.php?action=deconnexion" class="nav-link">Déconnection</a>
             </li>
         </ul>

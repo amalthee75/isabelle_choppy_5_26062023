@@ -14,7 +14,6 @@ class AuthorClass extends Model
 
     public function authors()
     {
-        var_dump($this->db);
         $sql = "SELECT * FROM auteurs";
         $request = $this->db->prepare($sql);
         $request->execute();
@@ -22,13 +21,15 @@ class AuthorClass extends Model
 
         return $reponse;
     }
-    public function add_Author_model($data)
-    {
 
+    public function add_author_model($data)
+    {
+        var_dump($data["nom"], $data["prenom"], $data["date_naissance"], $data["date_mort"]);
         $sql = 'INSERT INTO auteurs(nom, prenom, date_naissance, date_mort) VALUES(?, ?, ?, ?)';
         $request = $this->db->prepare($sql);
-        $request->execute($data["nom"], $data["prenom"], $data["date_naissance"], $data["date_mort"]);
+        $request->execute(array($data["nom"], $data["prenom"], $data["date_naissance"], $data["date_mort"]));
 
-        var_dump($request);
+        $reponse = $this->db->lastInsertId();
+        return $reponse;
     }
 }

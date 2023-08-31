@@ -87,9 +87,19 @@ header {
   list-style-type: none;
   gap: 23px;
 }
+.link_admin {
+  width: 150px;
+  height: 35px;
+  border-radius: 4px;
+  background-color: rgb(12, 116, 235);
+  padding-top: 5px;
+  color: white;
+  font-size: 17px;
+}
 
 .nav-link {
   text-decoration: none;
+  color: white;
 }
 
 /*Formulaire de connexion - page login*/
@@ -99,7 +109,7 @@ header {
   flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
-  margin-top: 50px;
+  margin-top: 150px;
 }
 
 #div_form #email,
@@ -122,11 +132,46 @@ header {
   font-size: 16px;
 }
 #img_page_login {
-  width: 25%;
+  width: 27%;
   margin: auto;
   margin-top: 30px;
   border: 1px solid white;
   border-radius: 4px;
+  box-shadow: 2px 0 9px black;
+}
+
+#img_page_login::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+  box-shadow: 2px 2px 7px black;
+  opacity: 0;
+  transition: opacity 0.3s ease-out;
+}
+
+#img_page_login:hover::after {
+  opacity: 1;
+}
+
+/*Menu d'accueil - page login*/
+
+#welcome_menu {
+  margin-top: 20px;
+  display: flex;
+  list-style-type: none;
+  gap: 23px;
+  flex-wrap: wrap;
+}
+
+#welcome_menu .link {
+  width: 127px;
+  height: 35px;
+  border: 1px solid white;
+  background-color: white;
+  text-align: center;
+  padding-top: 5px;
 }
 
 /*Dashboard*/
@@ -134,6 +179,33 @@ header {
 #contenu_dashboard {
   margin-top: 50px;
 }
+
+/*Formulaire ajouter les auteurs*/
+#add_authors {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: auto;
+  margin-top: 150px;
+}
+
+#add_authors .name,
+.firstname {
+  width: 200px;
+  height: 35px;
+  border-radius: 4px;
+}
+
+#add_authors #add {
+  margin-top: 2px;
+  height: 5vh;
+  width: 100px;
+  text-align: center;
+  font-weight: bolder;
+  color: black;
+  font-size: 16px;
+}
+
 /*footer*/
 footer {
   position: fixed;

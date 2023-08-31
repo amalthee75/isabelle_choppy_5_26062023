@@ -10,12 +10,10 @@
 
 <body>
     <div id="general">
-        <?php include("components/header.php") ?>
+        <?php include("components/header_admin.php") ?>
         <h1>Tableau de bord</h1>
         <div id="contenu_dashboard">
-
-            <!-- <input type="text" id="ajout" placeholder="Ajouter un auteur"> -->
-            <a href="romans_liste.php">Ajouter un auteur</a>
+            <a href="index.php?action=addAuthor">Ajouter un auteur</a>
             <a href="index.php?action=showAuthors">Voir tous les auteurs</a>
         </div>
 

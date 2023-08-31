@@ -1,12 +1,9 @@
 <?php
 
-
 function show_Authors_controller()
 {
-
     $author = new AuthorClass();
     $authors = $author->authors();
-    // var_dump($authors);
 
     // $_SESSION["success"] = "Liste des romans";
 
@@ -16,9 +13,27 @@ function show_Authors_controller()
 function add_Author_controller()
 {
 
-    // Si il y a un post ()
-    $author = new AuthorClass();
-    $author = $author->add_Author_model($_POST);
 
-    // Afficher le template HTML du formulaire
+    // Si il y a un post (Si le formulaire d'ajout a été envoyé)
+    if (
+        isset($_POST) && !empty($_POST)
+    ) {
+        $author = new AuthorClass();
+        $authorResponse = $author->add_author_model($_POST);
+
+        if ($authorResponse) {
+            $_SESSION["success"] = "Auteur ajouté";
+            //    Redirection vers tous les auteurs
+            header("Location: http://localhost/isabelle_choppy_5_26062023/index.php?action=showAuthors");
+        } else {
+            $_SESSION["error"] = "Erreur, contactez l'administrateur";
+        }
+    }
+
+    //Afficher le formulaire
+    include "templates/form_authors.php";
 }
+
+
+// Afficher le template HTML du formulaire
+// include "templates/form_authors.php";
