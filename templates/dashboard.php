@@ -17,7 +17,7 @@
             <a href="index.php?action=showAuthors">Voir tous les auteurs</a>
         </div>
 
-
+        <?php include("components/message.php") ?>
         <?php include("components/footer.php") ?>
     </div>
 

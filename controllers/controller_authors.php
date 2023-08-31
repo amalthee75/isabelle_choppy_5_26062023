@@ -5,7 +5,7 @@ function show_Authors_controller()
     $author = new AuthorClass();
     $authors = $author->authors();
 
-    // $_SESSION["success"] = "Liste des romans";
+    $_SESSION["success"] = "Connexion";
 
     require "templates/romans_liste.php";
 }

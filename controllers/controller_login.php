@@ -26,8 +26,6 @@ function loginConnexion_log()
         include "templates/dahsboard.php";
     }
 
-    // var_dump($_POST);
-
     if (
         isset($_POST) && !empty($_POST)
     ) {

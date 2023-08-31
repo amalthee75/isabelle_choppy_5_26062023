@@ -30,6 +30,7 @@
                 <li class="link">
                     <a href="#" class="nav-link">Créations</a>
                 </li>
+
         </div>
 
         <?php include("components/message.php") ?>

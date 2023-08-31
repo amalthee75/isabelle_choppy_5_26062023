@@ -99,7 +99,7 @@ header {
 
 .nav-link {
   text-decoration: none;
-  color: white;
+  color: black;
 }
 
 /*Formulaire de connexion - page login*/
@@ -163,6 +163,7 @@ header {
   list-style-type: none;
   gap: 23px;
   flex-wrap: wrap;
+  margin-left: -40px;
 }
 
 #welcome_menu .link {
