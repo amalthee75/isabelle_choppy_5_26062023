@@ -10,22 +10,22 @@ function show_Authors_controller()
     require "templates/romans_liste.php";
 }
 
-function
-show_One_Author_controller($id)
+function show_One_Author_controller($id)
 {
     $author = new AuthorClass();
     //Lancer la fiche de l'auteur et son oeuvre
-    $authorId = $author->show_one_author_model($id);
+    $author = $author->author($id);
 
-    if (!$authorId) {
-        $_SESSION["error"] = "<p>Cet auteur n'existe pas</p>";
+    if (!$author) {
+        $_SESSION["error"] = "Cet auteur n'existe pas";
 
-        header('Location:"http://localhost/isabelle_choppy_5_26062023/index.php?action=showAuthors');
-        exit();
-    } else {
-        include "templates/fiche/alexandre_dumas.php";
+        header('Location:http://localhost/isabelle_choppy_5_26062023/index.php?action=showAuthors');
+        return;
     }
+
+    require "templates/fiche.php";
 }
+
 function add_Author_controller()
 {
     // Si il y a un post (Si le formulaire d'ajout a été envoyé)
@@ -45,5 +45,5 @@ function add_Author_controller()
     }
 
     //Afficher le formulaire
-    include "templates/form_authors.php";
+    require "templates/form_authors.php";
 }

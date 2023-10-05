@@ -9,8 +9,9 @@
 </head>
 
 <body>
+    <?php include("components/header_admin.php") ?>
     <div id="general">
-        <?php include("components/header_admin.php") ?>
+
         <?php include("components/message.php") ?>
         <h1>Tableau de bord</h1>
         <div id="contenu_dashboard">

@@ -48,7 +48,8 @@ if (isset($_GET["action"]) && ($_GET["action"]) !== '') {
             break;
 
         case "showOneAuthor";
-            middlewareIsLogin(show_One_Author_controller($id));
+            middlewareIsLogin(show_One_Author_controller($_GET['id']));
+            break;
 
         case "dashboard";
             middlewareIsLogin(pagesController_dashboard());

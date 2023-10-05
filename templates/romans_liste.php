@@ -16,7 +16,7 @@
         <div id="liste_romans">
             <?php foreach ($authors as $author) { ?>
 
-                <p><a href="index.php?action=showOneAuthor"><?= htmlspecialchars($author["nom"]); ?><?= htmlspecialchars($author["prenom"]); ?></a> - <?= htmlspecialchars($author["date_naissance"]); ?> <?= htmlspecialchars($author["date_mort"]); ?></p>
+                <p><a href="index.php?action=showOneAuthor&id=<?= $author['id']; ?>"><?= htmlspecialchars($author["nom"]); ?><?= htmlspecialchars($author["prenom"]); ?></a> - <?= htmlspecialchars($author["date_naissance"]); ?> <?= htmlspecialchars($author["date_mort"]); ?></p>
 
             <?php } ?>
         </div>

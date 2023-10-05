@@ -18,6 +18,7 @@
             <input class="firstname" type="text" name="prenom">
             <input type="date" name="date_naissance">
             <input type="date" name="date_mort">
+            <input class="biography" type="text" name="biographie">
             <input id="add" type="submit" value="Ajouter">
         </form>
 

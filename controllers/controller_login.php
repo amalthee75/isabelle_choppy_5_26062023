@@ -23,7 +23,7 @@ function loginConnexion_log()
         header("Location: http://localhost/isabelle_choppy_5_26062023/index.php?action=dashboard");
         return true;
 
-        include "templates/dahsboard.php";
+        require "templates/dahsboard.php";
     }
 
     if (
