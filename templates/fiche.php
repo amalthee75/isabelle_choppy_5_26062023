@@ -20,15 +20,26 @@
             <p><?php echo $author['biographie'] ?></p>
         </div>
 
+        <div id="livres_id">
+
+            <?php foreach ($books as $book) {  ?>
+                <h5><?php echo $book["titre"] ?> <?= $book['date_parution'] ?></h5>
+                <p><?php echo $book['id_auteur'] ?></p>
+                <button type="submit" class=supprimer><a href="http://localhost/isabelle_choppy_5_26062023/index.php?action=deleteBook&idBook=<?php echo $book['id'] ?>" onclick=" return confirm('Confirmer la suppression');">Supprimer</a></button>
+                <button type="submit" class="modifier"><a href="http://localhost/isabelle_choppy_5_26062023/index.php?action=editBook&idBook=<?= $book["id"] ?>">Modifier</a></button>
+
+            <?php
+            }
+
+            ?>
+
+        </div>
 
         <?php include("components/footer.php") ?>
     </div>
 
-    <!-- <form action="ajoutCom">
-        <input type="text" id="pseudo" value="pseudo">
-        <input type="password" id="password" value="password">
-        <input type="submit" value="Envoyer">
-    </form> -->
+
+
 </body>
 
 </html>

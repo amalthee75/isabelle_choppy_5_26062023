@@ -12,13 +12,12 @@
     <div id="general">
         <?php include("components/header_admin.php") ?>
         <?php include("components/message.php"); ?>
-
         <form id="add_authors" action="index.php?action=addAuthor" method="POST">
             <input class="name" type="text" name="nom">
             <input class="firstname" type="text" name="prenom">
             <input type="date" name="date_naissance">
             <input type="date" name="date_mort">
-            <input class="biography" type="text" name="biographie">
+            <input class="biographie" type="text" name="biographie">
             <input id="add" type="submit" value="Ajouter">
         </form>
 

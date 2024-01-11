@@ -22,6 +22,7 @@ body {
 }
 
 #general h1 {
+  text-align: center;
   margin-top: 50px;
 }
 /*Messages*/
@@ -69,6 +70,7 @@ header {
 }
 
 #navbar h1 {
+  margin-top: 0;
   font-family: "Caprasimo", cursive;
   font-family: "Lilita One", cursive;
   font-family: "Poppins", sans-serif;
@@ -114,7 +116,7 @@ header {
   flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
-  margin-top: 150px;
+  margin-top: 20px;
 }
 
 #div_form #email,
@@ -172,9 +174,10 @@ header {
 }
 
 #welcome_menu .link {
-  width: 127px;
+  width: 140px;
   height: 35px;
   border: 1px solid white;
+  border-radius: 2px;
   background-color: white;
   text-align: center;
   padding-top: 5px;
@@ -183,16 +186,18 @@ header {
 /*Dashboard*/
 
 #contenu_dashboard {
+  text-align: center;
   margin-top: 50px;
 }
 
 /*Formulaire ajouter les auteurs*/
-#add_authors {
+#add_authors,
+#add_books {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   margin: auto;
-  margin-top: 150px;
+  margin-top: 20px;
 }
 
 #add_authors .name,
@@ -212,14 +217,50 @@ header {
   font-size: 16px;
 }
 
+/*formulaire ajouter livres*/
+#add_books {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: auto;
+  margin-top: 20px;
+}
+
+#add_books .titre,
+.date_parution {
+  width: 200px;
+  height: 35px;
+  border-radius: 4px;
+}
+
 /*Page - liste romans*/
 #liste_romans {
   margin-top: 0;
 }
 
+#liste_romans p {
+  text-align: center;
+}
+
 /*Page - auteur*/
 #auteur_id {
   margin-top: 150px;
+}
+
+#livres_id {
+  text-align: center;
+}
+
+/*Page - roman*/
+
+#editer_roman {
+  display: flex;
+  width: 50%;
+  margin: auto;
+}
+#edit_roman {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 /*footer*/

@@ -10,13 +10,12 @@
 <body>
     <div id="general">
 
-
         <?php include('components/header_admin.php') ?>
         <h1>Liste des romans</h1>
         <div id="liste_romans">
             <?php foreach ($authors as $author) { ?>
 
-                <p><a href="index.php?action=showOneAuthor&id=<?= $author['id']; ?>"><?= htmlspecialchars($author["nom"]); ?><?= htmlspecialchars($author["prenom"]); ?></a> - <?= htmlspecialchars($author["date_naissance"]); ?> <?= htmlspecialchars($author["date_mort"]); ?></p>
+                <p><a href="index.php?action=showOneAuthor&id=<?= $author['id']; ?>"><?= htmlspecialchars($author["nom"]); ?> <?= htmlspecialchars($author["prenom"]); ?></a> <?= htmlspecialchars($author["date_naissance"]); ?> <?= htmlspecialchars($author["date_mort"]); ?></p>
 
             <?php } ?>
         </div>

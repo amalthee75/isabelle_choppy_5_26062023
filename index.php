@@ -5,12 +5,15 @@ session_start();
 require_once("models/model.php");
 require_once("models/user_model.php");
 require_once("models/author_model.php");
+require_once("models/books_model.php");
+require_once("models/roman_model.php");
 //Routeur
 require_once("controllers/controller_pages.php");
 // require_once("controllers/controller_commentaires.php");
-// require_once("controllers/controller_romans.php");
+require_once("controllers/controller_romans.php");
 require_once("controllers/controller_authors.php");
 require_once("controllers/controller_login.php");
+require_once("controllers/controller_books.php");
 
 function middlewareIsLogin($LaunchFonction)
 {
@@ -43,6 +46,20 @@ if (isset($_GET["action"]) && ($_GET["action"]) !== '') {
             middlewareIsLogin(add_Author_controller());
             break;
 
+        case "addBooks";
+            middlewareIsLogin(add_book_controller());
+            break;
+        case "editBook";
+            // index.php?action=editBook&idBook=1
+            middlewareIsLogin(edit_book_controller($_GET["idBook"]));
+            break;
+
+        case "showBook";
+            middlewareIsLogin(show_book_controller($_GET["idBook"]));
+
+        case "deleteBook";
+            middlewareIsLogin(delete_book_controller($_GET['idBook']));
+
         case "showAuthors";
             middlewareIsLogin(show_Authors_controller());
             break;
@@ -50,6 +67,9 @@ if (isset($_GET["action"]) && ($_GET["action"]) !== '') {
         case "showOneAuthor";
             middlewareIsLogin(show_One_Author_controller($_GET['id']));
             break;
+
+            // case "editRoman";
+            //     middlewareIsLogin(edit_roman_controller());
 
         case "dashboard";
             middlewareIsLogin(pagesController_dashboard());

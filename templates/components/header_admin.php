@@ -10,6 +10,8 @@
             </li>
             <li class="link"><a href="index.php?action=showAuthors" class="nav-link">Liste des auteurs</a>
             </li>
+            <li class="link"><a href="index.php?action=addBooks" class="nav-link">addBooks</a>
+            </li>
 
             <li class="link">
                 <a href="index.php?action=deconnexion" class="nav-link">Déconnection</a>

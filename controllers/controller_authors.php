@@ -12,9 +12,9 @@ function show_Authors_controller()
 
 function show_One_Author_controller($id)
 {
-    $author = new AuthorClass();
+    $authorModel = new AuthorClass();
     //Lancer la fiche de l'auteur et son oeuvre
-    $author = $author->author($id);
+    $author = $authorModel->author($id);
 
     if (!$author) {
         $_SESSION["error"] = "Cet auteur n'existe pas";
@@ -22,6 +22,12 @@ function show_One_Author_controller($id)
         header('Location:http://localhost/isabelle_choppy_5_26062023/index.php?action=showAuthors');
         return;
     }
+
+    //Récupères ses livres ?
+    $bookModel = new BooksClass();
+    $books = $bookModel->get_all_books_of_author_model($id);
+
+    // var_dump($books);
 
     require "templates/fiche.php";
 }

@@ -12,7 +12,7 @@ class Model
     public function connexion_db()
     {
         //connexion DSN
-        $dsn = "mysql:dbname=projet5;host=localhost";
+        $dsn = "mysql:dbname=projet5;charset=utf8;host=localhost";
 
         // We connect to the database
         try {
