@@ -10,9 +10,9 @@ class BooksClass extends Model
             isset($data["date_parution"]) &&
             !empty($data["date_parution"]) &&
             isset($data["id_auteur"]) &&
-            !empty($data["id_auteur"]) &&
-            isset($data["content"]) &&
-            !empty($data["content"])
+            !empty($data["id_auteur"])
+            // isset($data["content"]) &&
+            // !empty($data["content"])
         ) {
             $sql = 'INSERT INTO romans(titre, date_parution, id_auteur) VALUES(?, ?, ?)';
             $request = $this->db->prepare($sql);
@@ -44,20 +44,19 @@ class BooksClass extends Model
     public function book_edit_model($data, $book_id)
     {
         $title = htmlspecialchars($data["title"]);
-        $content = htmlspecialchars($data("content"));
-        $id = $book_id;
+        $date_parution = htmlspecialchars($data["date_parution"]);
 
-        $sql = 'UPDATE romans SET title = ?, content = ? WHERE id = ?';
+        $sql = "UPDATE romans SET title = ?, date_parution = ?, id_auteur = ?  WHERE id =$book_id";
         $update = $this->db->prepare($sql);
-        $update->execute(array($title, $content, $id));
+        $update->execute(array($title, $date_parution, $book_id));
         var_dump($update);
 
-        if ($update->rowCount() == 1) {
-            var_dump($update->rowCount());
-            return true;
-        } else {
-            return false;
-        }
+        // if ($update->rowCount() == 1) {
+        //     var_dump($update->rowCount());
+        //     return true;
+        // } else {
+        //     return false;
+        // }
     }
     public function book_delete_model($book_id)
     {
@@ -67,6 +66,21 @@ class BooksClass extends Model
 
         return $reponse;
     }
-
     // Retrouver un livre avec son ID
+    public function modify_book_model($data, $book_id)
+    {
+        $title = htmlspecialchars($data["titre"]);
+        $date_parution = htmlspecialchars($data["date_parution"]);
+        $sql = 'UPDATE romans  SET  titre = ?, date_parution = ?, book_id WHERE id = ?';
+        $update = $this->db->prepare($sql);
+        $update->execute(array($title, $date_parution, $book_id));
+        var_dump($update);
+
+        if ($update->rowCount() == 1) {
+            var_dump($update->rowCount());
+            return true;
+        } else {
+            return false;
+        }
+    }
 }

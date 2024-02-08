@@ -51,18 +51,6 @@ function edit_book_controller($book_id): void
 {
     // Pour comprendre quoi faire s'inpirer du AddBook, c'est similaire
 
-    // if (isset($_POST) && !empty($_POST) && isset($data["title"]) && isset($data["date_parution"])) {
-    //     $bookModel = new BooksClass();
-    //     $book = $bookModel->book_edit_model($data, $book_id);
-    //     if ($book) {
-    //         $_SESSION["success"] = "Livre modifié";
-    //     } else {
-    //         $_SESSION["error"] = "Livre non modifié";
-    //     }
-    //     header("http://http://localhost/isabelle_choppy_5_26062023/index.php?action=editBook&idBook=1");
-    //     return;
-    // }
-
     if (!isset($book_id) || (isset($book_id) && !is_numeric($book_id))) {
         $_SESSION["error"] = "Erreur: Le livre n'existe pas";
         header("Location: http://localhost/isabelle_choppy_5_26062023/index.php?action=showAuthors");
@@ -101,7 +89,6 @@ function show_book_controller($book_id)
         header("Location: http://localhost/isabelle_choppy_5_26062023/index.php?action=showAuthors");
         return;
     }
-
     $bookModel = new BooksClass();
     $book_findId = $bookModel->find_book_by_id_model($book_id);
     var_dump($book_findId);
@@ -114,4 +101,15 @@ function show_book_controller($book_id)
 
     // SINON redirection vers la page des auteurs
     header("Location: http://localhost/isabelle_choppy_5_26062023/index.php?action=showAuthors");
+}
+
+function modify_book_controller($data, $book_id)
+{
+    $bookModel = new BooksClass();
+    $book_modify = $bookModel->modify_book_model($data, $book_id);
+
+    if ($book_modify) {
+        $_SESSION["success"] = "Success: le livre a été modifié";
+        header('http://localhost/isabelle_choppy_5_26062023/index.php?action=showOneAuthor&id=' . $book_id);
+    }
 }

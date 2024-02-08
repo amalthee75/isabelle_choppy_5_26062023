@@ -53,3 +53,17 @@ function add_Author_controller()
     //Afficher le formulaire
     require "templates/form_authors.php";
 }
+
+function delete_author_controller($id)
+{
+    $author = new AuthorClass();
+    $authorDelete = $author->delete_author_model($id);
+
+    if ($authorDelete) {
+        $_SESSION["success"] = "Auteur supprimé";
+        //    Redirection vers tous les auteurs
+        header("Location: http://localhost/isabelle_choppy_5_26062023/index.php?action=showAuthors");
+    } else {
+        $_SESSION["error"] = "Auteur non supprimé";
+    }
+}

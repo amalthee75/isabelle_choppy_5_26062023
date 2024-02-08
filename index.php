@@ -60,6 +60,9 @@ if (isset($_GET["action"]) && ($_GET["action"]) !== '') {
         case "deleteBook";
             middlewareIsLogin(delete_book_controller($_GET['idBook']));
 
+        case "deleteAuthor";
+            middlewareIsLogin(delete_author_controller($id));
+
         case "showAuthors";
             middlewareIsLogin(show_Authors_controller());
             break;

@@ -13,9 +13,9 @@
         <?php include("components/header_admin.php") ?>
         <div id="general">
             <div id="editer_book">
-                <form id="edit_book" action=" http://localhost/isabelle_choppy_5_26062023/index.php?action=editBook&idBook<?= $book_id ?>" method="POST">
-                    <input type="text" name="title" value="<?= htmlspecialchars($book["titre"]) ?>" id="title">
-                    <input type="date" id="date_parution">
+                <form id="edit_book" action="http://localhost/isabelle_choppy_5_26062023/index.php?action=editBook&idBook=<?= $book_id ?>" method="POST">
+                    <input type="text" name="title" value="<?= htmlspecialchars($book["title"]) ?>" id="title">
+                    <input type="date" name="date_parution" value="<?= htmlspecialchars($book["date_parution"]) ?>" id="date_parution">
                     <input type="submit" value="Envoyer">
                 </form>
             </div>

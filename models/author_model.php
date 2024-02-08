@@ -35,4 +35,13 @@ class AuthorClass extends Model
         return $reponse;
         var_dump($reponse);
     }
+    public function
+    delete_author_model($id)
+    {
+        $request = $this->db->prepare("DELETE FROM auteurs WHERE id = ?");
+        $reponse = $request->execute(array($id));
+        var_dump($reponse);
+
+        return $reponse;
+    }
 }
